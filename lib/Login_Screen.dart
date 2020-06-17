@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutterapp/AdditionalScreen.dart';
 
  class LoginPage extends StatefulWidget{
   @override
@@ -64,8 +65,8 @@ class Login extends State<LoginPage> {
                   color: Colors.blue,
                   child: Text('Login'),
                   onPressed: () {
-
-                  },
+                    Navigator.push(context,MaterialPageRoute(builder: (context) => Additional()));
+                    },
                 )),
             Container(
               child: Row(
