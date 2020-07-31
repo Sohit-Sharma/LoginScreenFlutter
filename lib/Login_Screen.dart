@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterapp/AdditionalScreen.dart';
+import 'package:flutterapp/drawer.dart';
+import 'package:flutterapp/tabbar.dart';
 
  class LoginPage extends StatefulWidget{
   @override
@@ -85,7 +87,31 @@ class Login extends State<LoginPage> {
                 ],
                 mainAxisAlignment: MainAxisAlignment.center,
               ),
-            )
+            ),
+            Container(
+                height: 50,
+                margin: EdgeInsets.fromLTRB(0, 50, 0, 0),
+                padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                child: RaisedButton(
+                  textColor: Colors.white,
+                  color: Colors.blue,
+                  child: Text('Tab Layout'),
+                  onPressed: () {
+                    Navigator.push(context,MaterialPageRoute(builder: (context) => Tabbarz()));
+                  },
+                )),
+            Container(
+                height: 50,
+                margin: EdgeInsets.fromLTRB(0, 50, 0, 0),
+                padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                child: RaisedButton(
+                  textColor: Colors.white,
+                  color: Colors.blue,
+                  child: Text('Drawer Layout'),
+                  onPressed: () {
+                    Navigator.push(context,MaterialPageRoute(builder: (context) => DrawerView()));
+                  },
+                )),
           ],
         ),
       ),

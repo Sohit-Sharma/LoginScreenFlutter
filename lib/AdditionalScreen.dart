@@ -72,6 +72,7 @@ class AdditionalScreen extends State<Additional> {
 
   }
 
+
   void getLocation() async{
      position=await Geolocator().getCurrentPosition(desiredAccuracy: LocationAccuracy.lowest);
   }
